@@ -61,7 +61,7 @@ const encoderCesar = () => {
   let indiceCodificado = codificarPosiciones(pos);
   let vectorCodificado = codificar(indiceCodificado);
   //return console.log(vectorCodificado);
-  return resultado.innerHTML = "El resultado es: "+ vectorCodificado;
+  return resultado.innerHTML = "El resultado es: "+ vectorCodificado.join("");
 }
 const decoderCesar = () => {
   let vectorADecodificar = (document.getElementById("aCifrar").value).toUpperCase();
@@ -69,5 +69,5 @@ const decoderCesar = () => {
   let indicesDeCodificado = decodificarPosiciones(posDecode);
   let decodificado = codificar(indicesDeCodificado);
   //return console.log(decodificado);
-  return resultado.innerHTML = "El resultado es: "+ decodificado;
+  return resultado.innerHTML = "El resultado es: "+ decodificado.join("");
 }
