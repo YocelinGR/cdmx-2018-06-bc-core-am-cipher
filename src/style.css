@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #DEBF74;
+  font-family: "Roboto";
+  border-top: 10px solid #5FC194;
+  text-align: center;}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -36,5 +36,49 @@
       <p id="resultado">Resultado</p>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+  </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora de Cifrado César</title>
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div id="bienvenida">
+        <h1>Bienvenido al cifrador César</h1>
+        <p id= "mensajeC">El Cifrado César es: </p>
+      </div>
+      <section id = "codigo">
+        <h2>Texto a convertir</h2>
+        <input type="text" id="aCifrar" placeholder="Ingresa el texto">
+        <label for="aCifrar"></label>
+        <h2>Clave del cifrado</h2>
+        <input type="text" id="clave" placeholder="Vlave de Cifrado">
+        <input type="button" id="claveCod" value="Ingresar valor" onclick="ingresarClave()">
+        <label for="claveCod"></label>
+      </section>
+    </header>
+    <section id ="cifrar">
+      <h2>Cifrar</h2>
+      <input type="button" id="codifica" value="Codificar" onclick="encodeASCII()">
+      <label for="codifica"></label>
+    </section>
+    <section id = "descifrar">
+      <h2>DESCIFRAR</h2>
+      <input type="button" id="decodificar" value="Decodificar" onclick="decodeFromAscii()">
+      <label for="decodificar"></label>
+    </section>
+      <h2>Traducción</h2>
+      <p id="resultado"></p>
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
   </body>
 </html>
