@@ -58,26 +58,30 @@
       </div>
       <section id = "codigo">
         <h2>Texto a convertir</h2>
-        <input type="text" id="aCifrar" placeholder="Ingresa el texto">
-        <label for="aCifrar"></label>
+        <input type="text" id="string" placeholder="Ingresa el texto">
+        <label for="string"></label>
         <h2>Clave del cifrado</h2>
-        <input type="text" id="clave" placeholder="Vlave de Cifrado">
-        <input type="button" id="claveCod" value="Ingresar valor" onclick="ingresarClave()">
-        <label for="claveCod"></label>
+        <input type="text" id="offset" placeholder="Clave de Cifrado">
+        <!--<input type="button" id="offsetKey" value="Ingresar valor">-->
+        <label for="offset"></label>
       </section>
+
     </header>
-    <section id ="cifrar">
+    <section id ="toCipher">
       <h2>Cifrar</h2>
-      <input type="button" id="codifica" value="Codificar" onclick="encodeASCII()">
-      <label for="codifica"></label>
+      <input type="button" id="encode" value="Codificar">
+      <label for="encode"></label>
     </section>
-    <section id = "descifrar">
+
+    <section id = "toDesCipher">
       <h2>DESCIFRAR</h2>
-      <input type="button" id="decodificar" value="Decodificar" onclick="decodeFromAscii()">
-      <label for="decodificar"></label>
+      <input type="button" id="decode" value="Decodificar">
+      <label for="decode"></label>
     </section>
+
       <h2>Traducción</h2>
-      <p id="resultado"></p>
+      <div id="result"></div>
+      <div id="root"></div>
       <script src="cipher.js"></script>
       <script src="index.js"></script>
   </body>

@@ -1,59 +1,48 @@
-let resultado = document.getElementById("resultado");
+window.cipher = {
 
+  encode : (string, offset) => {
+  offset = parseInt(offset);
+    console.log(string, offset);
+  let alphabetToAscii = new Array(string.length);
+  let asciiToEncode = new Array(string.length);
+  let encodeToAscii = new Array(string.length);
 
-const ingresarClave = () => {
-  let clave = parseInt(document.getElementById("clave").value);
-  return clave;
-}
-
-const encodeASCII = () => {
-  let vectorACodificar = document.getElementById("aCifrar").value;
-  let alphabetToAscii = new Array(vectorACodificar.length);
-  let asciiToEncode = new Array(vectorACodificar.length);
-  let encodeToAscii = new Array(vectorACodificar.length);
-  let CesarsKey = ingresarClave();
-  for (let i=0; i<(vectorACodificar.length); i++) {
-
-    alphabetToAscii[i] = vectorACodificar.charCodeAt(i);
-    //asciiToEncode[i] = ((alphabetToAscii[i]-65+CesarsKey)%26)+65;
-    ////
+  for (let i=0; i<(string.length); i++) {
+    alphabetToAscii[i] = string.charCodeAt(i);
     if((alphabetToAscii[i]>=65) && (alphabetToAscii[i]<=90)){
-       asciiToEncode[i] = ((alphabetToAscii[i]-65+CesarsKey)%26)+65;
+       asciiToEncode[i] = ((alphabetToAscii[i]-65+offset)%26)+65;
     }else if(alphabetToAscii[i]===32){
        asciiToEncode[i] = alphabetToAscii[i];
     }else if((alphabetToAscii[i]>=97) && (alphabetToAscii[i]<=122)) {
-      asciiToEncode[i] = ((alphabetToAscii[i]-97+CesarsKey)%26)+97;
+      asciiToEncode[i] = ((alphabetToAscii[i]-97+offset)%26)+97;
     }else if((alphabetToAscii[i]>=48) && (alphabetToAscii[i]<=57)){
-      asciiToEncode[i] = ((alphabetToAscii[i]-48+CesarsKey)%10)+48;
+      asciiToEncode[i] = ((alphabetToAscii[i]-48+offset)%10)+48;
     }
     ///
     encodeToAscii[i] = String.fromCharCode(asciiToEncode[i]);
   }
-   return (resultado.innerHTML = encodeToAscii.join(""));
-}
+   return (result.innerHTML = encodeToAscii.join(""));
+},
 
+  decode : (string, offset) => {
+  console.log(offset);
+  let encoderToAscii = new Array(string.length);
+  let asciiToDecode = new Array(string.length);
+  let decodeToAlphabet = new Array(string.length);
 
-
-const decodeFromAscii = () => {
-  let vectorADecodificar = document.getElementById("aCifrar").value;
-  let CesarsKey = ingresarClave();
-  let encoderToAscii = new Array(vectorADecodificar.length);
-  let asciiToDecode = new Array(vectorADecodificar.length);
-  let decodeToAlphabet = new Array(vectorADecodificar.length);
-
-  for (let i=0; i<(vectorADecodificar.length); i++) {
-    encoderToAscii[i] = vectorADecodificar.charCodeAt(i);
+  for (let i=0; i<(string.length); i++) {
+    encoderToAscii[i] = string.charCodeAt(i);
     if((encoderToAscii[i]>=65) && (encoderToAscii[i]<=90)){
-       asciiToDecode[i] = ((encoderToAscii[i]+65-CesarsKey)%26)+65;
+       asciiToDecode[i] = ((encoderToAscii[i]+65-offset)%26)+65;
     }else if(encoderToAscii[i]===32){
        asciiToDecode[i] = encoderToAscii[i];
     }else if((encoderToAscii[i]>=97) && (encoderToAscii[i]<=122)) {
-      asciiToDecode[i] = ((encoderToAscii[i]+90-CesarsKey)%26)+92;
+      asciiToDecode[i] = ((encoderToAscii[i]+90-offset)%26)+92;
       console.log(asciiToDecode[i]);
     }else if((encoderToAscii[i]>=48) && (encoderToAscii[i]<=57)){
       asciiToDecode[i] = 0;
-      asciiToDecode[i] = ((encoderToAscii[i]+48-CesarsKey)%10)+42;
-      asciiToDecode[i] = ((encoderToAscii[i]+48-CesarsKey)%10)+42;
+      asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
+      asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
       if ((asciiToDecode[i])>=42 &&(asciiToDecode[i])<=47){
         asciiToDecode[i] = asciiToDecode[i]+10;
       }
@@ -62,8 +51,10 @@ const decodeFromAscii = () => {
 
   }
   //return console.log(decodeToAlphabet.join(""));
-  return (resultado.innerHTML = decodeToAlphabet.join(""));
+  return (result.innerHTML = decodeToAlphabet.join(""));
 }
+};
+
 //window.cipher = {
   // ...
 //};
