@@ -5,15 +5,21 @@ let string = document.getElementById("string");
 let encode = document.getElementById("encode");
 let decode = document.getElementById("decode");
 let result = document.getElementById("result");
+let withOffset = document.getElementById("hackerEdition");
 // DEFINIENDO EVENTOS DEL DOM CON addEventListener
 
 encode.addEventListener("click", cipherFun);
 function cipherFun () {
-  window.cipher.encode(string.value, offset.value);
+  result.innerHTML = window.cipher.encode(string.value, offset.value);
 }
 
 
 decode.addEventListener("click", deCipherFun);
 function deCipherFun () {
-window.cipher.decode(string.value, offset.value);
+  result.innerHTML = window.cipher.decode(string.value, offset.value);
+}
+
+withOffset.addEventListener("click", withOffsetFun);
+function withOffsetFun () {
+window.cipher.createCipherWithOffset(offset.value);
 }

@@ -2,7 +2,7 @@ window.cipher = {
 
   encode : (string, offset) => {
   offset = parseInt(offset);
-    console.log(string, offset);
+    //console.log(string, offset);
   let alphabetToAscii = new Array(string.length);
   let asciiToEncode = new Array(string.length);
   let encodeToAscii = new Array(string.length);
@@ -11,7 +11,7 @@ window.cipher = {
     alphabetToAscii[i] = string.charCodeAt(i);
     if((alphabetToAscii[i]>=65) && (alphabetToAscii[i]<=90)){
        asciiToEncode[i] = ((alphabetToAscii[i]-65+offset)%26)+65;
-    }else if(alphabetToAscii[i]===32){
+    }else if((alphabetToAscii[i]>=32) && (alphabetToAscii[i]<=47)){
        asciiToEncode[i] = alphabetToAscii[i];
     }else if((alphabetToAscii[i]>=97) && (alphabetToAscii[i]<=122)) {
       asciiToEncode[i] = ((alphabetToAscii[i]-97+offset)%26)+97;
@@ -21,11 +21,12 @@ window.cipher = {
     ///
     encodeToAscii[i] = String.fromCharCode(asciiToEncode[i]);
   }
-   return (result.innerHTML = encodeToAscii.join(""));
+  //result.innerHTML = encodeToAscii.join("");
+  return encodeToAscii.join("");
 },
 
   decode : (string, offset) => {
-  console.log(offset);
+  //console.log(offset);
   let encoderToAscii = new Array(string.length);
   let asciiToDecode = new Array(string.length);
   let decodeToAlphabet = new Array(string.length);
@@ -34,11 +35,11 @@ window.cipher = {
     encoderToAscii[i] = string.charCodeAt(i);
     if((encoderToAscii[i]>=65) && (encoderToAscii[i]<=90)){
        asciiToDecode[i] = ((encoderToAscii[i]+65-offset)%26)+65;
-    }else if(encoderToAscii[i]===32){
+    }else if((encoderToAscii[i]>=32) && (encoderToAscii[i]<=47)){
        asciiToDecode[i] = encoderToAscii[i];
     }else if((encoderToAscii[i]>=97) && (encoderToAscii[i]<=122)) {
       asciiToDecode[i] = ((encoderToAscii[i]+90-offset)%26)+92;
-      console.log(asciiToDecode[i]);
+      //console.log(asciiToDecode[i]);
     }else if((encoderToAscii[i]>=48) && (encoderToAscii[i]<=57)){
       asciiToDecode[i] = 0;
       asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
@@ -51,7 +52,13 @@ window.cipher = {
 
   }
   //return console.log(decodeToAlphabet.join(""));
-  return (result.innerHTML = decodeToAlphabet.join(""));
+  //result.innerHTML = decodeToAlphabet.join("");
+  return decodeToAlphabet.join("");
+},
+
+createCipherWithOffset : (offset) =>{
+  //console.log(offset);
+  return (console.log(cipher.encode("Hola", offset)), console.log(cipher.decode("ovsh", offset)));
 }
 };
 
