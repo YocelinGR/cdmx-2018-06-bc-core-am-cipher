@@ -6,6 +6,7 @@ let encode = document.getElementById("encode");
 let decode = document.getElementById("decode");
 let result = document.getElementById("result");
 let withOffset = document.getElementById("hackerEdition");
+let objString = document.getElementById("objString");
 // DEFINIENDO EVENTOS DEL DOM CON addEventListener
 
 encode.addEventListener("click", cipherFun);
@@ -21,5 +22,6 @@ function deCipherFun () {
 
 withOffset.addEventListener("click", withOffsetFun);
 function withOffsetFun () {
-window.cipher.createCipherWithOffset(offset.value);
+  objString.vale;
+  result.innerHTML = window.cipher.createCipherWithOffset(offset.value);
 }

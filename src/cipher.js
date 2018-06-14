@@ -39,11 +39,14 @@ window.cipher = {
        asciiToDecode[i] = encoderToAscii[i];
     }else if((encoderToAscii[i]>=97) && (encoderToAscii[i]<=122)) {
       asciiToDecode[i] = ((encoderToAscii[i]+90-offset)%26)+92;
-      //console.log(asciiToDecode[i]);
+      if ((asciiToDecode[i])>=92 &&(asciiToDecode[i])<=96){
+        asciiToDecode[i] = asciiToDecode[i]+26;
+      }
+      console.log(asciiToDecode[i]);
     }else if((encoderToAscii[i]>=48) && (encoderToAscii[i]<=57)){
       asciiToDecode[i] = 0;
       asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
-      asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
+      //asciiToDecode[i] = ((encoderToAscii[i]+48-offset)%10)+42;
       if ((asciiToDecode[i])>=42 &&(asciiToDecode[i])<=47){
         asciiToDecode[i] = asciiToDecode[i]+10;
       }
@@ -58,7 +61,14 @@ window.cipher = {
 
 createCipherWithOffset : (offset) =>{
   //console.log(offset);
-  return (console.log(cipher.encode("Hola", offset)), console.log(cipher.decode("ovsh", offset)));
+  let objectWithOffset ={
+
+    encode: let encodeOffset = cipher.encode(objString, offset),
+    decode: let decodeOffset = cipher.decode(objString, offset)
+  }
+  console.log(objectWithOffset);
+  return objectWithOffset;
+  //("Codificación: " + cipher.encode("Hola", offset) + " ,Decodificación: " + cipher.decode("ovsh", offset));
 }
 };
 
