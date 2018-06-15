@@ -6,7 +6,49 @@
   box-sizing: border-box; }
 
 body {
-  background: #DEBF74;
+  background: #CFDEDF;
   font-family: "Roboto";
   border-top: 10px solid #5FC194;
+  border-bottom: 10px solid #5FC194;
   text-align: center;}
+#wOffset{
+  display: none;
+}
+
+    input[type="button"]{
+      display: none;
+    }
+    label{
+      color: #077D49;
+      background: #C1DFD5;
+      padding: 10px 25px;
+      position: relative;
+      font-size: 1.5em;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-table;
+    }
+    label:hover{
+      background: rgba(131,122,136,0.5);
+    }
+    input[type="text"],
+    #result {
+      color: #077D49;
+      background: #C1DFD5;
+      padding: 10px 25px;
+      display: inline-block;
+      position: relative;
+      font-size: 1.5em;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    input[type="text"]:hover,
+    #result:hover{
+      background: rgba(131,122,136,0.5);
+    }
+
+    p {
+        text-align: center;
+        color: #13656B;
+        display: inline-block;
+      }

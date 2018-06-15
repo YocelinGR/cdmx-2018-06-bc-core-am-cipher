@@ -54,29 +54,29 @@
     <header>
       <div id="bienvenida">
         <h1>Bienvenido al cifrador César</h1>
-        <p id= "mensajeC">El Cifrado César es: </p>
+        <p id= "mensajeC"> <em>El Cifrado César es: Un método de cifrado por corrimiento</em></p>
       </div>
       <section id = "codigo">
-        <h2>Texto a convertir</h2>
+        <h3>Texto a convertir</h3>
         <input type="text" id="string" placeholder="Ingresa el texto">
-        <label for="string"></label>
-        <h2>Clave del cifrado</h2>
+        <!--<label for="string"></label>-->
+        <h3>Clave del cifrado</h3>
         <input type="text" id="offset" placeholder="Clave de Cifrado">
         <!--<input type="button" id="offsetKey" value="Ingresar valor">-->
-        <label for="offset"></label>
+        <!--<label for="offset"></label>-->
       </section>
 
     </header>
     <section id ="toCipher">
-      <h2>Cifrar</h2>
+      <!--<h2>Cifrar</h2>-->
       <input type="button" id="encode" value="Codificar">
-      <label for="encode"></label>
+      <label for="encode">Codificar</label>
     </section>
 
     <section id = "toDesCipher">
-      <h2>DESCIFRAR</h2>
+      <!--<h2>DESCIFRAR</h2>-->
       <input type="button" id="decode" value="Decodificar">
-      <label for="decode"></label>
+      <label for="decode">Decodificar</label>
     </section>
 
     <section id = "wOffset">
@@ -84,11 +84,13 @@
       <input type="text" id="objString" placeholder="Ingresa el texto">
       <label for="objString"></label>
       <input type="button" id="hackerEdition" value="CipherWOffset">
-      <label for="hackerEdition"></label>
+      <label for="hackerEdition">Hacker Ed</label>
     </section>
 
-      <h2>Traducción</h2>
-      <div id="result"></div>
+      <h3>Traducción</h3>
+      <p id="result">
+        <label for="result">Zona de Codificación</label>
+      </p>
       <div id="root"></div>
       <script src="cipher.js"></script>
       <script src="index.js"></script>
