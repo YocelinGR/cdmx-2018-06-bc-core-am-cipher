@@ -61,14 +61,14 @@ window.cipher = {
 
 createCipherWithOffset : (offset) =>{
   //console.log(offset);
-  let objectWithOffset ={
+  /*let objectWithOffset ={
 
-    encode: let encodeOffset = cipher.encode(objString, offset),
-    decode: let decodeOffset = cipher.decode(objString, offset)
+    encode: let encodeOffset = cipher.encode(string, offset),
+    decode: let decodeOffset = cipher.decode(string, offset)
   }
   console.log(objectWithOffset);
-  return objectWithOffset;
-  //("Codificación: " + cipher.encode("Hola", offset) + " ,Decodificación: " + cipher.decode("ovsh", offset));
+  return objectWithOffset;*/
+  return ("Codificación: " + cipher.encode("Hola", offset) + " ,Decodificación: " + cipher.decode("ovsh", offset));
 }
 };
 

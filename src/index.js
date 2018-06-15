@@ -22,6 +22,6 @@ function deCipherFun () {
 
 withOffset.addEventListener("click", withOffsetFun);
 function withOffsetFun () {
-  objString.vale;
+  //objString.vale;
   result.innerHTML = window.cipher.createCipherWithOffset(offset.value);
 }
