@@ -11,9 +11,6 @@ body {
   border-top: 10px solid #5FC194;
   border-bottom: 10px solid #5FC194;
   text-align: center;}
-#wOffset{
-  display: none;
-}
 
     input[type="button"]{
       display: none;
