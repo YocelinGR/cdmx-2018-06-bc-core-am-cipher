@@ -83,6 +83,7 @@ window.cipher = {
           return (cipher.decode(decodePhrase,offset));
         }
       }
+//console.log(typeof("Frase cifrada: "+ objCipher.encode(encodePhrase) + "\n"+ "Frase Descifrada: " + objCipher.decode(decodePhrase)));
       return ("Frase cifrada: "+ objCipher.encode(encodePhrase) + "\n"+ "Frase Descifrada: " + objCipher.decode(decodePhrase));
       //return (objCipher.encode(encodePhrase) + objCipher.decode(decodePhrase));
       //console.log(JSON.stringify(objCipher));

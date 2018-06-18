@@ -7,12 +7,12 @@
 h1{
   font-family: 'Pacifico', cursive;
   font-size: 2em;
+  text-align: center;
   color: #4D765D;
 }
 p{
   font-family: 'Dancing Script', cursive;
   font-size: 1.3em;
-  color:
   text-align: center;
   color: #13656B;
   display: inline-block;
@@ -42,6 +42,7 @@ body {
       display: inline-block;
       font-family: 'Amatic SC', cursive;
       font-size: 1.3em;
+      text-align: center;
 
     }
     label:hover{
@@ -59,12 +60,13 @@ body {
       cursor: pointer;
       font-family: 'Pacifico', cursive;
       font-size: 1em;
-
+      text-align: center;
     }
     input[type="text"]:hover,
     #result:hover{
       background: rgba(131,122,136,0.5);
       font-family: 'Pacifico', cursive;
       font-size: 1em;
+      text-align: center;
 
     }
