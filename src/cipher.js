@@ -76,17 +76,26 @@ window.cipher = {
       let encodePhrase = objString1.value;
       let decodePhrase = objString2.value;
       let objCipher ={
-        offset : offset,
-        encodePhrase : encodePhrase,
-        decodePhrase : decodePhrase,
         encode : (encodePhrase) =>{
-          return cipher.encode(encodePhrase,offset);
+          return (cipher.encode(encodePhrase,offset));
         },
         decode : (decodePhrase) =>{
-          return cipher.decode(decodePhrase,offset);
+          return (cipher.decode(decodePhrase,offset));
         }
       }
       return ("Frase cifrada: "+ objCipher.encode(encodePhrase) + "\n"+ "Frase Descifrada: " + objCipher.decode(decodePhrase));
-      //return objCipher;
+      //return (objCipher.encode(encodePhrase) + objCipher.decode(decodePhrase));
+      //console.log(JSON.stringify(objCipher));
+      //console.log(('%j', objCipher.encode(encodePhrase)),('%j', objCipher.decode(decodePhrase)));
+      //return ('%j', objCipher);
+      //console.log(typeof('%j', objCipher.encode(encodePhrase)));
+      //console.log(typeof('%j', objCipher));
+      //return (('%j', objCipher.encode(encodePhrase)) + ('%j', objCipher.decode(decodePhrase)));
+      //return ('%j', objCipher);
+      /*let myObj = Object.create(objCipher);
+      myObj.encode(encodePhrase);
+      myObj.decode(decodePhrase);
+      console.log(typeof(myObj));
+      return myObj;*/
    }
 };

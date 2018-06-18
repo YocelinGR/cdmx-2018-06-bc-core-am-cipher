@@ -4,13 +4,29 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: #4D765D;
+}
+p{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  color:
+  text-align: center;
+  color: #13656B;
+  display: inline-block;
+}
 body {
   background: #CFDEDF;
   font-family: "Roboto";
   border-top: 10px solid #5FC194;
   border-bottom: 10px solid #5FC194;
-  text-align: center;}
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1em;
+
+}
 
     input[type="button"]{
       display: none;
@@ -23,7 +39,10 @@ body {
       font-size: 1.5em;
       border-radius: 10px;
       cursor: pointer;
-      display: inline-table;
+      display: inline-block;
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.3em;
+
     }
     label:hover{
       background: rgba(131,122,136,0.5);
@@ -38,14 +57,14 @@ body {
       font-size: 1.5em;
       border-radius: 10px;
       cursor: pointer;
+      font-family: 'Pacifico', cursive;
+      font-size: 1em;
+
     }
     input[type="text"]:hover,
     #result:hover{
       background: rgba(131,122,136,0.5);
-    }
+      font-family: 'Pacifico', cursive;
+      font-size: 1em;
 
-    p {
-        text-align: center;
-        color: #13656B;
-        display: inline-block;
-      }
+    }
