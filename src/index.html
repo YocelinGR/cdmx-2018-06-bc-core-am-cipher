@@ -62,10 +62,10 @@
       </div>
       <section id = "codigo">
         <h3>Texto a convertir</h3>
-        <input type="text" id="string" placeholder="Ingresa el texto">
+        <input type="text" id="string" placeholder="Ingresa el texto" title= "Descubre el secreto...">
         <!--<label for="string"></label>-->
         <h3>Clave del cifrado</h3>
-        <input type="text" id="offset" placeholder="Clave de Cifrado">
+        <input type="text" id="offset" placeholder="Clave de Cifrado" title="Tu código es un número">
         <!--<input type="button" id="offsetKey" value="Ingresar valor">-->
         <!--<label for="offset"></label>-->
       </section>
@@ -82,27 +82,27 @@
     <section id ="toCipher">
       <!--<h2>Cifrar</h2>-->
       <input type="button" id="encode" value="Codificar">
-      <label for="encode">Codificar</label>
+      <label title= "Codifica el mensaje que compartiras" for="encode">Codificar</label>
     </section>
 
     <section id = "toDesCipher">
       <!--<h2>DESCIFRAR</h2>-->
       <input type="button" id="decode" value="Decodificar">
-      <label for="decode">Decodificar</label>
+      <label title= "Descubre qué es lo que te escribieron" for="decode">Decodificar</label>
     </section>
 
     <section id = "wOffset">
       <h2>Hacker Edition</h2>
-      <input type="text" id="objString1" placeholder="Texto a cifrar">
-      <input type="text" id="objString2" placeholder="Texto a descifrar">
+      <input type="text" id="objString1" placeholder="Texto a cifrar" title="Codifica el mensaje que compartiras">
+      <input type="text" id="objString2" placeholder="Texto a descifrar" title= "Descubre qué es lo que te escribieron">
       <!--<label for="objString"></label>-->
       <input type="button" id="hackerEdition" value="CipherWOffset">
-      <label for="hackerEdition">Hacker Ed</label>
+      <label title= "Cifra y descifra con la misma clave" for="hackerEdition">Hacker Ed</label>
     </section>
 
       <h3>Traducción</h3>
       <p id="result">
-        <label for="result">Zona de Codificación</label>
+        <label for="result" title="Copia tu mensaje y compartelo con tus amigos">Zona de Codificación</label>
       </p>
       <div id="root"></div>
       <script src="cipher.js"></script>
