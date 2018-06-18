@@ -83,6 +83,7 @@ window.cipher = {
      }*/
       //let encodePhrase = objString1.value;
       //let decodePhrase = objString2.value;
+      //
       let encodePhrase = "Hola";
       let decodePhrase = "Adios";
       //let decodePhrase = objString2.value;
