@@ -73,8 +73,19 @@ window.cipher = {
   return decodeToAlphabet.join("");
 },
    createCipherWithOffset : (offset) =>{
-      let encodePhrase = objString1.value;
-      let decodePhrase = objString2.value;
+    /* if ((objString1.value != null) && (objString2.value != null)){
+       encodePhrase = objString1.value;
+       decodePhrase = objString2.value;
+     }
+     else{
+       encodePhrase = "Los perritos son bonitos";
+       decodePhrase = "Los gatitos son suaves";
+     }*/
+      //let encodePhrase = objString1.value;
+      //let decodePhrase = objString2.value;
+      let encodePhrase = "Hola";
+      let decodePhrase = "Adios";
+      //let decodePhrase = objString2.value;
       let objCipher = Object.create({},{
         getEncode :{value: function(){return this.Encode;}},
         getDecode :{value: function(){return this.Decode;}}
