@@ -4,6 +4,9 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+  html{
+    font-size: 16px;
+  }
 h1{
   font-family: 'Pacifico', cursive;
   font-size: 2em;
@@ -70,3 +73,54 @@ body {
       text-align: center;
 
     }
+.help-bar{
+  position: fixed;
+  right: 0;
+  top: 25%
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+.icon{
+  color: #F4F3EE;
+  text-decoration: none;
+  padding: 0.7rem;
+  padding-right: 1rem;
+  display: flex;
+  transition: all 0.5s;
+  background-color: #64DCB2;
+}
+.icon-rocket:before{
+  background-color: #64DCB2;
+}
+.icon-facebook2{
+  background-color: #2E406E;
+}
+.icon-youtube{
+  background-color: #E83028;
+}
+.icon-mail2{
+  background-color: #5DBBD5;
+}
+.icon-library{
+  background-color: #958562;
+}
+.icon-key{
+  background-color: #956271;
+}
+.icon-cogs{
+  background-color: #5B6264;
+}
+.icon:first-child{
+  border-radius: 1rem 0 0 0;
+}
+.icon:last-child{
+  border-radius: 0 0 0 1rem;
+}
+.icon:hover{
+  padding-right: 3rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.42);
+}
