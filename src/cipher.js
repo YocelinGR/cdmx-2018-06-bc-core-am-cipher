@@ -107,9 +107,11 @@ window.cipher = {
       console.log(typeof(objCipher));
       console.log(Object.keys(objCipher));
       console.log(objCipher.valueOf());
+      console.log("tipo: " + typeof(objCipher.valueOf()));
       //console.log(myObj.encode(encodePhrase));
       //console.log(myObj.decode(decodePhrase));
-      //return (objCipher.valueOf());
-      return ("Frase cifrada: "+ objCipher.encode + "\n"+ "Frase Descifrada: " + objCipher.decode);
+      console.log("Frase cifrada: "+ objCipher.encode + "\n"+ "Frase Descifrada: " + objCipher.decode);
+      return (objCipher.valueOf());
+      //return ("Frase cifrada: "+ objCipher.encode + "\n"+ "Frase Descifrada: " + objCipher.decode);
    }
 };
