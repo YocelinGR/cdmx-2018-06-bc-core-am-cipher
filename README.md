@@ -88,5 +88,13 @@ Se buscará posteriormente agregar la capacidad de importar y exportar mensajes.
   * Se realizarón varios sketches hasta encontrar la interfaz más amigable que permita que el flujo de la aplicación sea: elegir la clave de codificación -> elegir la acción a ejecutar  -> Ingresar el mensaje a tratar -->Ver resultado como un producto de transformación (a nivel del otro mensaje).
   * Se realizaron entrevistas a usuarios sin experiencia con el uso de dispositivos móviles para evaluar el entendimiento de la aplicación
   * Se usó los sketches con los usuarios de prueba para evaluar si era fácil de llegar al objetivo o no, además se consideró sus gustos para la selección de los colores.
+* Sketches
+  * Sketch 1: El sketch 1 (de la imagen el inferior),fue el más sencillo y aceptado por la gente de mediana a grande edad,  por ser más sencillo, sin embargo falta más explicación sobre el funcionamiento del cifrado y qué código usar. Los usuarios sugieren colores claros y etiquetas para saber que datos usar.
+  ![Sketch 1-2] (/Pictures/boceto1-2.jpg)
+  Format: ![Alt Sketch1](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/35529138_1676448149091104_2137404167210139648_n.jpg?_nc_cat=0&oh=54aed3cf233beae23f77fd571955fafe&oe=5BBDF371)
+  * Sketch 2: De la imagen anterior, el primer cuadro. Gracias a usuarios más jovenes, fue posible identificar que una estructura similar a la de Google  Traductor era más fácil de entender, que sería muy útil poder importar y exportar sus mensajes desde WattsApp u otro sistema de mensajeria y que sería "genial" poder revertir el proceso con un botón de inversion. Además se decidio agregar apartadas desplegables que dieran información sobre el cifrado y la clave.
+  * Sketch 3: Recopilada la información del sketch 1 y 2 fue posible diseñar el siguiente Sketch, que incluye secciones de información, un medio de contacto para dudas, sugerencias y problemas con la pagina, globos emergentes con una breve explicación de cada boton y además, a sugerencia de los usuarios más pequeños incluir in personaje animado que guíe por el proceso.
+  ![Sketch 3] (/Pictures/boceto3.jpg)
+  Format: ![Alt Sketch1](https://scontent.fmex10-2.fna.fbcdn.net/v/t1.15752-9/35517494_1676448239091095_680979782178963456_n.jpg?_nc_cat=0&oh=75d864ceefcea545f805960af304fc2e&oe=5BB08ACA)
 
 >Yocelin Garcia Romero Junio 2018
