@@ -1,7 +1,5 @@
 window.cipher = {
  //MÉTODO ENCODE: CODIFICA EL TEXTO
- //objString1 : objString1,
- //objString2 : objString2,
   encode : (string, offset) => {
   offset = parseInt(offset);
     //console.log(string, offset);
@@ -53,7 +51,6 @@ window.cipher = {
       if ((asciiToDecode[i])>=92 &&(asciiToDecode[i])<=96){
         asciiToDecode[i] = asciiToDecode[i]+26;
       }
-      //console.log(asciiToDecode[i]);
       /*Condición para números: Se decodifica, con operación contraria y se compensa corrimiento de conjunto
       de valores con ´+48, y corrimiento dentro del conjunto con +42. Se agrega condicion de sumar +10 a
       los últimas 6 numeros*/
@@ -68,62 +65,19 @@ window.cipher = {
     decodeToAlphabet[i] = String.fromCharCode(asciiToDecode[i]);
 
   }
-  //return console.log(decodeToAlphabet.join(""));
-  //result.innerHTML = decodeToAlphabet.join("");
   return decodeToAlphabet.join("");
 },
    createCipherWithOffset : (offset) =>{
-    /* if ((objString1.value != null) && (objString2.value != null)){
-       encodePhrase = objString1.value;
-       decodePhrase = objString2.value;
-     }
-     else{
-       encodePhrase = "Los perritos son bonitos";
-       decodePhrase = "Los gatitos son suaves";
-     }*/
-      //let encodePhrase = objString1.value;
-      //let decodePhrase = objString2.value;
-      //
-      let encodePhrase = "Hola";
-      let decodePhrase = "Adios";
-      //let decodePhrase = objString2.value;
-      let objCipher = Object.create({},{
-        getEncode :{value: function(){return this.Encode;}},
-        getDecode :{value: function(){return this.Decode;}}
-      });
-      //objCipher.encode.prototype.valueOf : () => {return this.Encode;};
-      //objCipher.decode.prototype.valueOf : () => {return this.Decode;};
-
-      /*{
-        encode : (encodePhrase) =>{
-          return (cipher.encode(encodePhrase,offset));
-        },
-        decode : (decodePhrase) =>{
-          return (cipher.decode(decodePhrase,offset));
-        }
-      }*/
-//console.log(typeof("Frase cifrada: "+ objCipher.encode(encodePhrase) + "\n"+ "Frase Descifrada: " + objCipher.decode(decodePhrase)));
-      //return ("Frase cifrada: "+ objCipher.encode(encodePhrase) + "\n"+ "Frase Descifrada: " + objCipher.decode(decodePhrase));
-      //return (objCipher.encode(encodePhrase) + objCipher.decode(decodePhrase));
-      //console.log(JSON.stringify(objCipher));
-      //console.log(('%j', objCipher.encode(encodePhrase)),('%j', objCipher.decode(decodePhrase)));
-      //return ('%j', objCipher);
-      //console.log(typeof('%j', objCipher.encode(encodePhrase)));
-      //console.log(typeof('%j', objCipher));
-      //return (('%j', objCipher.encode(encodePhrase)) + ('%j', objCipher.decode(decodePhrase)));
-      //return ('%j', objCipher);
-      //let myObj = Object.create(objCipher);
-
-      objCipher.encode = cipher.encode(encodePhrase,offset);
-      objCipher.decode = cipher.decode(decodePhrase,offset);
-      console.log(typeof(objCipher));
-      console.log(Object.keys(objCipher));
-      console.log(objCipher.valueOf());
-      console.log("tipo: " + typeof(objCipher.valueOf()));
-      //console.log(myObj.encode(encodePhrase));
-      //console.log(myObj.decode(decodePhrase));
-      console.log("Frase cifrada: "+ objCipher.encode + "\n"+ "Frase Descifrada: " + objCipher.decode);
-      return (objCipher.valueOf());
-      //return ("Frase cifrada: "+ objCipher.encode + "\n"+ "Frase Descifrada: " + objCipher.decode);
+     let encodePhrase = "Hola";
+     let decodePhrase = "Adios";
+     let objCipher = Object.create({},{
+       getEncode :{value: function(){return this.Encode;}},
+       getDecode :{value: function(){return this.Decode;}}
+     });
+     objCipher.encode = cipher.encode(encodePhrase,offset);
+     objCipher.decode = cipher.decode(decodePhrase,offset);
+     let textObj = JSON.stringify(objCipher);
+     let returnObj = [textObj, objCipher.valueOf()];
+     return returnObj;
    }
 };
